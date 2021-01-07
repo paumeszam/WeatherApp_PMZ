@@ -1,0 +1,103 @@
+body {
+  background: #e8ffc1;
+  font-family: "Poppins", sans-serif;
+}
+
+.search-engine {
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  color: #212529;
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  width: 60%;
+}
+
+#submit,
+#location {
+  border: 1px solid #ced4da;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 60%;
+}
+
+#location {
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+h1,
+a {
+  color: #0278ae;
+  font-size: 50px;
+}
+
+h2 {
+  color: #51adcf;
+  font-size: 30px;
+}
+
+h3 {
+  color: #2ec1ac;
+  font-size: 28px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.sun-icon {
+  color: #ffc93c;
+  font-size: 200px;
+}
+
+.cloud-icon,
+.cloud-sun-icon {
+  font-size: 50px;
+  line-height: 2;
+  text-align: center;
+}
+
+.cloud-icon {
+  color: #a2d5f2;
+}
+
+.cloud-sun-icon {
+  color: #fddb3a;
+}
+
+.card-group {
+  margin-top: 65px;
+}
+
+.card-title {
+  font-size: 35px;
+  text-align: center;
+}
+
+.card-footer {
+  text-align: center;
+}
+
+.footer {
+  color: #51adcf;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-top: 50px;
+  text-align: center;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+   
+    <script src="https://kit.fontawesome.com/09d695cfd4.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="src/style.css">
+
+    <title>Weather App PMZ</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <input type="text" class="search-engine" id="search"placeholder=" 🔍 Enter city here">
+            </div>
+            <div class="col-sm-3">
+                <button type="button" class="btn btn-light" id="submit">Search</button>
+            </div>
+            <div class="col-sm-3">
+                <button type="button" class="btn btn-light" id="location"> 📍 Current Location</button>
+            </div>
+           
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <h1 id="degrees">
+                    24°C
+                </h1>
+                <h2>
+                    Mexico City
+                </h2>
+                <h3>
+                    Today
+                </h3>
+            </div>
+            <div class="col-sm-8">
+                <i class="fas fa-sun sun-icon"></i>
+            </div>
+        </div>
+        <p>
+        <div class="card-group">
+            <div class="card">
+                <i class="fas fa-cloud cloud-icon"></i>
+                <div class="card-body">
+                    <h5 class="card-title">20 °C</h5>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">MONDAY</small>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fas fa-cloud cloud-icon"></i>
+                <div class="card-body">
+                    <h5 class="card-title">17 °C</h5>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">TUESDAY</small>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fas fa-cloud-sun cloud-sun-icon"></i>
+                <div class="card-body">
+                    <h5 class="card-title">21 °C</h5>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">WEDNESDAY</small>
+                </div>
+            </div>
+            <div class="card">
+            <i class="fas fa-cloud cloud-icon"></i>
+                <div class="card-body">
+                    <h5 class="card-title">19 °C</h5>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">THURSDAY</small>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fas fa-cloud cloud-icon"></i>
+                <div class="card-body">
+                    <h5 class="card-title">18 °C</h5>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">FRIDAY</small>
+                </div>
+            </div>
+        </div>
+        </p>    
+    </div>
+    <p>
+        <div class="footer">
+            Coded by PMZ
+        </div>  
+    </p>
+    <script src="src/script.js"></script>
+</body>
+</html>
