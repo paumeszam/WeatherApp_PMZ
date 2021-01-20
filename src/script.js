@@ -3,6 +3,7 @@ let date = new Date();
 let day = date.getDay();
 let hour = date.getHours();
 let minutes = date.getMinutes();
+let today = document.querySelector("#date");
 
 let dayNames = [
   "Sunday",
@@ -21,7 +22,6 @@ if (minutes < 10) {
 return minutes;
 }
 
-let today = document.querySelector("h3");
 today.innerHTML = (`${dayNames[day]}, ${hour}:${setMinutes(minutes)}`);
 
 //Input City Search
@@ -39,20 +39,19 @@ submitButton.addEventListener("click",changeCity);
 
 //Current Temperature
 function showWeather(response){
-    console.log(response);
-    console.log(response.data.main.temp);
-    let h1 = document.querySelector("#degrees");
-    let temperature = Math.round(response.data.main.temp);
-    h1.innerHTML = `${temperature}`;
-    let h2 = document.querySelector("h2");
-    let location = (response.data.name);
-    h2.innerHTML = location;
-    let humidity = document.querySelector('#humidity');
-    humidity.innerHTML = response.data.main.humidity;
-    let wind = document.querySelector('#wind');
-    wind.innerHTML = Math.round(response.data.wind.speed); 
+  let cityName = document.querySelector("#city");
+  let location = (response.data.name);
+  let degrees = document.querySelector("#degrees");
+  let temperature = Math.round(response.data.main.temp);
+  let humidity = document.querySelector('#humidity');
+  let wind = document.querySelector('#wind');
+  let weatherDescription = document.querySelector("#weather-description");
+  cityName.innerHTML = location;
+  degrees.innerHTML = `${temperature}`;
+  humidity.innerHTML = response.data.main.humidity;
+  wind.innerHTML = Math.round(response.data.wind.speed);
+  weatherDescription.innerHTML = response.data.weather[0].description; 
 } 
-
 
 //Current Location
 
