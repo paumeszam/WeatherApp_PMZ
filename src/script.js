@@ -1,5 +1,4 @@
 //Current Date
-
 let date = new Date();
 let day = date.getDay();
 let hour = date.getHours();
@@ -15,17 +14,15 @@ let dayNames = [
   "Saturday"
 ];
 
-function addZero(){
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-  return minutes;
+function setMinutes(minutes){
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
+return minutes;
 }
 
 let today = document.querySelector("h3");
-addZero();
-today.innerHTML = (`${dayNames[day]}, ${hour}:${minutes}`);
+today.innerHTML = (`${dayNames[day]}, ${hour}:${setMinutes(minutes)}`);
 
 //Input City Search
 
@@ -46,7 +43,7 @@ function showWeather(response){
     console.log(response.data.main.temp);
     let h1 = document.querySelector("#degrees");
     let temperature = Math.round(response.data.main.temp);
-    h1.innerHTML = `${temperature}°C`;
+    h1.innerHTML = `${temperature}`;
     let h2 = document.querySelector("h2");
     let location = (response.data.name);
     h2.innerHTML = location;
