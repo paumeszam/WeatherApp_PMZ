@@ -47,7 +47,12 @@ function showWeather(response){
     let h2 = document.querySelector("h2");
     let location = (response.data.name);
     h2.innerHTML = location;
-}
+    let humidity = document.querySelector('#humidity');
+    humidity.innerHTML = response.data.main.humidity;
+    let wind = document.querySelector('#wind');
+    wind.innerHTML = Math.round(response.data.wind.speed); 
+} 
+
 
 //Current Location
 
