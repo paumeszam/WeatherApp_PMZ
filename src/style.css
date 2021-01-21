@@ -18,6 +18,14 @@ body {
   width: 60%;
 }
 
+.weather-app {
+  max-width: 800px;
+  margin: 20px auto;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 25px;
+}
+
 #submit,
 #location {
   border: 1px solid #ced4da;
@@ -32,6 +40,13 @@ body {
 
 #weather-description {
   text-transform: capitalize;
+}
+
+#weather-icon {
+  display: block;
+  margin: 0 auto;
+  height: 100px;
+  width: 100px;
 }
 
 h1,
