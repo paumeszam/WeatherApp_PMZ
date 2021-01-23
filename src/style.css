@@ -76,14 +76,26 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+.units .active {
+  cursor: default;
+  color: #2ec1ac;
+}
+
+.units .active:hover {
+  text-decoration: none;
 }
 
 li {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.units {
+  font-weight: bold;
+  line-height: 1.5;
+  color: #2ec1ac;
+  font-size: 20px;
 }
 
 .sun-icon {
