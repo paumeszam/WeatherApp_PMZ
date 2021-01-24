@@ -111,11 +111,27 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 // Forecast
 
+function formatTime(time){
+  let timeElement = new Date(time);
+  let hours = timeElement.getHours();
+  let minutes = timeElement.getMinutes();
+
+  if (hours<10) {
+    hours = `0${hours}`;
+  }
+
+  if (minutes<10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${hours}:${minutes}`;
+}
+  
 function getForecast(response){
   console.log(response);
   let forecastElement = document.querySelector("#forecast");
-  forecastElement.innerHTML = null;
-  let element = null;
+  forecastElement.innerHTML = null; //this way forecast HTML is "empty"
+  let element = null; // this way index restarts at 0 each time the function is ran 
   
   
   for (let index = 0; index < 5; index++) {
@@ -127,8 +143,9 @@ function getForecast(response){
           <h5 class="card-title" id="forecast-degrees">${Math.round(element.main.temp_max)} °C | ${Math.round(element.main.temp_min)} °C</h5>
         </div>
       <div class="card-footer">
-        <small class="text-muted" id="forecast-time">PRUEBA</small>
+        <small class="text-muted" id="forecast-time">${formatTime(element.dt*1000)}</small>
       </div>
   </div>`;
   }
 }
+
