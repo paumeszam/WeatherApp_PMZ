@@ -140,8 +140,9 @@ function getForecast(response){
     `<div class="card">
       <img src="http://openweathermap.org/img/wn/${element.weather[0].icon}@2x.png"" alt="" id="weather-icon">
         <div class="card-body">
-          <h5 class="card-title" id="forecast-degrees">${Math.round(element.main.temp_max)} °C | ${Math.round(element.main.temp_min)} °C</h5>
-        </div>
+          <h5 class="card-title" id="forecast-degrees">${Math.round(element.main.temp_max)}°C | ${Math.round(element.main.temp_min)}°C</h5>
+          <h6 class="card-title" id="forecast-subtitle">Max T. | Min T.</h6>
+          </div>
       <div class="card-footer">
         <small class="text-muted" id="forecast-time">${formatTime(element.dt*1000)}</small>
       </div>
