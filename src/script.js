@@ -150,3 +150,15 @@ function getForecast(response){
   }
 }
 
+//Initial load
+
+function initialLoad(city){
+  let apiKey = "3298e39870d933f506bba233ba3572ef";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&&units=metric`;
+  axios.get(apiUrl).then(showWeather);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`
+  axios.get(apiUrl).then(getForecast);
+}
+
+initialLoad("Mexico City");
